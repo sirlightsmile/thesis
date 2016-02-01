@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 060ccb4a6720349f7852672f3e94c127
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - pointerText: {fileID: 2800000, guid: 88f1fa8836e5f424794ede7e57f05f98, type: 3}
+  - ponter_Inventory: {fileID: 2800000, guid: 56fd9c330504a4021885aee2a10c6e98, type: 3}
+  - ponter_Inventory_Observe: {fileID: 2800000, guid: 4e7798349c0324e35a321c19ce34a2b8,
+      type: 3}
+  - pointer_Observe: {fileID: 2800000, guid: 0416c9c0327214ec7a45ee48f9801084, type: 3}
+  - pointer_Interact: {fileID: 2800000, guid: efc112e9f4b8445f7a57678e5b11d571, type: 3}
+  - pointer_Interact_Observe: {fileID: 2800000, guid: 4e7798349c0324e35a321c19ce34a2b8,
+      type: 3}
+  - pointer_ChangeLevel: {fileID: 2800000, guid: 51d7d4f9ac8c449408906bcebe8e5e30,
+      type: 3}
+  - pointer_ChangeLevel_Observe: {instanceID: 0}
+  - pointer_Dialog: {fileID: 2800000, guid: 5efaa971ac61c4b8a894ff059cceb734, type: 3}
+  - pointer_ShowText: {instanceID: 0}
+  - ponter_Door: {fileID: 2800000, guid: 1318dac42b08140f8a4ea916261c9fdb, type: 3}
+  - ponter_Door_Observe: {fileID: 2800000, guid: da893d2a56f774d0ea58c2ddcaa3d402,
+      type: 3}
+  - ponter_DoorDrag: {fileID: 2800000, guid: 02e5ba74451534b6da4587f958b4bdf7, type: 3}
+  - ponter_DoorDrag_Observe: {fileID: 2800000, guid: 0350e697984c64cab95a17cca606a542,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

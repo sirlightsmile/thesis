@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/MyScene/prototypeScene.unity
+  - enabled: 0
+    path: Assets/MyScene/GameOver.unity
+  - enabled: 1
+    path: Assets/MyScene/MainMenu.unity
+  - enabled: 1
+    path: Assets/MyScene/LoadingScene.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter1/Chapter 1-Part1.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter1/CutScene1.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter1/Chapter 1-Part2.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter1/RenaiMemories1.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter1/Chapter 1-Part2.5.unity
+  - enabled: 1
+    path: Assets/MyScene/GameOver.unity

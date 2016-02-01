@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400006}
+  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400008}
+  - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
+  m_Layer: 0
+  m_Name: -GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .32601738, y: 2.89079475, z: 4.99586344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e654110bc32bc46e89d983905509bfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customSkin: {fileID: 0}
+  inventoryUI_Sprite: {fileID: 0}
+  inventoryDesc_Sprite: {fileID: 0}
+  inventoryIconUI: {fileID: 0}
+  inventoryDesc_TextMesh: {fileID: 0}
+  inventoryIconUI_Sprite: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441ac653ffe8d4dc8a99aeb80f90ed42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observeButton: 108
+  inventoryObjButton: 107
+  showInventoryButton: 121
+  showInventorySpriteButton: 117
+  interactButton: 106
+  interactDialogButton: 108
+  showTextButton: 108
+  interactChangeLevelButton: 105
+  interactDoorButton: 106
+  changeLevelYes_Button: 109
+  changeLevelNo_Button: 110
+  switchFlashlight: 102
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce88534f283664516b2b7ce5932e8a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observeTextMesh: {fileID: 0}
+  isDebugging: 1
+  debugLanguage: 0
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cf864f7471d416d938a7b748a85735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeText: {fileID: 2800000, guid: 544247a6ad10041eb907b0d8b7fd01ba, type: 3}
+  fadeSpeed: .200000003
+  alpha: 1
+  fade: 0
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5540e561b3f4d4699b222a98d625b350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogUI: {fileID: 0}
+  questionObject: {fileID: 0}
+  nextButtonObj: {fileID: 0}
+  question01Text: {fileID: 0}
+  question02Text: {fileID: 0}
+  question03Text: {fileID: 0}
+  question04Text: {fileID: 0}
+  question01Obj: {fileID: 0}
+  question02Obj: {fileID: 0}
+  question03Obj: {fileID: 0}
+  question04Obj: {fileID: 0}
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d8ce45b33c04192bad48b0765101d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showTextSpriteUI: {fileID: 0}
+  showText_NextButton: {fileID: 0}
+  showText_BackButton: {fileID: 0}
+  showTextSprite_TextMesh: {fileID: 0}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74023a844a90948239164db14edd7a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handObj: {fileID: 0}
+  batteryUI: {fileID: 0}
+  batteryLifeTextMesh: {fileID: 0}
+  drainLifeEvery: 10
+  flashlight_LightObj: {fileID: 0}
+  batterySprite: {fileID: 0}
+  sprite_Empty: {fileID: 21300000, guid: fc7992c5d4f314a809dd953f27830f18, type: 3}
+  sprite_One: {fileID: 21300000, guid: 974eb1aabe190487a987ed639fea883d, type: 3}
+  sprite_Two: {fileID: 21300000, guid: 4117b8c1f2feb4722b2ca683b3ae911d, type: 3}
+  sprite_Three: {fileID: 21300000, guid: 7a1f0c0a6e99b4f83b0d6605d7c96e83, type: 3}
+  sprite_Four: {fileID: 21300000, guid: 1e73f237a870f4e019bac867c738f450, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

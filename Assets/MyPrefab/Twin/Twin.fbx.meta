@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: e278debd3f7a015478994767ae289699
+timeCreated: 1453017289
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: alma:Head
+    100002: alma:HeadTop_End
+    100004: alma:Hips
+    100006: alma:LeftArm
+    100008: alma:LeftFoot
+    100010: alma:LeftForeArm
+    100012: alma:LeftHand
+    100014: alma:LeftHandIndex1
+    100016: alma:LeftHandIndex2
+    100018: alma:LeftHandIndex3
+    100020: alma:LeftHandIndex4
+    100022: alma:LeftHandThumb1
+    100024: alma:LeftHandThumb2
+    100026: alma:LeftHandThumb3
+    100028: alma:LeftHandThumb4
+    100030: alma:LeftLeg
+    100032: alma:LeftShoulder
+    100034: alma:LeftToe_End
+    100036: alma:LeftToeBase
+    100038: alma:LeftUpLeg
+    100040: alma:Model001_24_head_0_7_0_0
+    100042: alma:Model001_25_body_0_7_0_0
+    100044: alma:Model001_6_hair_0_3_0_0
+    100046: alma:Neck
+    100048: alma:RightArm
+    100050: alma:RightFoot
+    100052: alma:RightForeArm
+    100054: alma:RightHand
+    100056: alma:RightHandIndex1
+    100058: alma:RightHandIndex2
+    100060: alma:RightHandIndex3
+    100062: alma:RightHandIndex4
+    100064: alma:RightHandThumb1
+    100066: alma:RightHandThumb2
+    100068: alma:RightHandThumb3
+    100070: alma:RightHandThumb4
+    100072: alma:RightLeg
+    100074: alma:RightShoulder
+    100076: alma:RightToe_End
+    100078: alma:RightToeBase
+    100080: alma:RightUpLeg
+    100082: alma:Spine
+    100084: alma:Spine1
+    100086: alma:Spine2
+    100088: //RootNode
+    400000: alma:Head
+    400002: alma:HeadTop_End
+    400004: alma:Hips
+    400006: alma:LeftArm
+    400008: alma:LeftFoot
+    400010: alma:LeftForeArm
+    400012: alma:LeftHand
+    400014: alma:LeftHandIndex1
+    400016: alma:LeftHandIndex2
+    400018: alma:LeftHandIndex3
+    400020: alma:LeftHandIndex4
+    400022: alma:LeftHandThumb1
+    400024: alma:LeftHandThumb2
+    400026: alma:LeftHandThumb3
+    400028: alma:LeftHandThumb4
+    400030: alma:LeftLeg
+    400032: alma:LeftShoulder
+    400034: alma:LeftToe_End
+    400036: alma:LeftToeBase
+    400038: alma:LeftUpLeg
+    400040: alma:Model001_24_head_0_7_0_0
+    400042: alma:Model001_25_body_0_7_0_0
+    400044: alma:Model001_6_hair_0_3_0_0
+    400046: alma:Neck
+    400048: alma:RightArm
+    400050: alma:RightFoot
+    400052: alma:RightForeArm
+    400054: alma:RightHand
+    400056: alma:RightHandIndex1
+    400058: alma:RightHandIndex2
+    400060: alma:RightHandIndex3
+    400062: alma:RightHandIndex4
+    400064: alma:RightHandThumb1
+    400066: alma:RightHandThumb2
+    400068: alma:RightHandThumb3
+    400070: alma:RightHandThumb4
+    400072: alma:RightLeg
+    400074: alma:RightShoulder
+    400076: alma:RightToe_End
+    400078: alma:RightToeBase
+    400080: alma:RightUpLeg
+    400082: alma:Spine
+    400084: alma:Spine1
+    400086: alma:Spine2
+    400088: //RootNode
+    4300000: alma:Model001_25_body_0_7_0_0
+    4300002: alma:Model001_6_hair_0_3_0_0
+    4300004: alma:Model001_24_head_0_7_0_0
+    7400000: Idle
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: alma:Model001_24_head_0_7_0_0
+    13700002: alma:Model001_25_body_0_7_0_0
+    13700004: alma:Model001_6_hair_0_3_0_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 3
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: mixamo.com
+      firstFrame: 5
+      lastFrame: 50
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: alma:Hips
+        weight: 1
+      - path: alma:Hips/alma:LeftUpLeg
+        weight: 1
+      - path: alma:Hips/alma:LeftUpLeg/alma:LeftLeg
+        weight: 1
+      - path: alma:Hips/alma:LeftUpLeg/alma:LeftLeg/alma:LeftFoot
+        weight: 1
+      - path: alma:Hips/alma:LeftUpLeg/alma:LeftLeg/alma:LeftFoot/alma:LeftToeBase
+        weight: 1
+      - path: alma:Hips/alma:LeftUpLeg/alma:LeftLeg/alma:LeftFoot/alma:LeftToeBase/alma:LeftToe_End
+        weight: 1
+      - path: alma:Hips/alma:RightUpLeg
+        weight: 1
+      - path: alma:Hips/alma:RightUpLeg/alma:RightLeg
+        weight: 1
+      - path: alma:Hips/alma:RightUpLeg/alma:RightLeg/alma:RightFoot
+        weight: 1
+      - path: alma:Hips/alma:RightUpLeg/alma:RightLeg/alma:RightFoot/alma:RightToeBase
+        weight: 1
+      - path: alma:Hips/alma:RightUpLeg/alma:RightLeg/alma:RightFoot/alma:RightToeBase/alma:RightToe_End
+        weight: 1
+      - path: alma:Hips/alma:Spine
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandIndex1
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandIndex1/alma:LeftHandIndex2
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandIndex1/alma:LeftHandIndex2/alma:LeftHandIndex3
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandIndex1/alma:LeftHandIndex2/alma:LeftHandIndex3/alma:LeftHandIndex4
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandThumb1
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandThumb1/alma:LeftHandThumb2
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandThumb1/alma:LeftHandThumb2/alma:LeftHandThumb3
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:LeftShoulder/alma:LeftArm/alma:LeftForeArm/alma:LeftHand/alma:LeftHandThumb1/alma:LeftHandThumb2/alma:LeftHandThumb3/alma:LeftHandThumb4
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:Neck
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:Neck/alma:Head
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:Neck/alma:Head/alma:HeadTop_End
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandIndex1
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandIndex1/alma:RightHandIndex2
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandIndex1/alma:RightHandIndex2/alma:RightHandIndex3
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandIndex1/alma:RightHandIndex2/alma:RightHandIndex3/alma:RightHandIndex4
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandThumb1
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandThumb1/alma:RightHandThumb2
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandThumb1/alma:RightHandThumb2/alma:RightHandThumb3
+        weight: 1
+      - path: alma:Hips/alma:Spine/alma:Spine1/alma:Spine2/alma:RightShoulder/alma:RightArm/alma:RightForeArm/alma:RightHand/alma:RightHandThumb1/alma:RightHandThumb2/alma:RightHandThumb3/alma:RightHandThumb4
+        weight: 1
+      - path: alma:Model001_6_hair_0_3_0_0
+        weight: 1
+      - path: alma:Model001_24_head_0_7_0_0
+        weight: 1
+      - path: alma:Model001_25_body_0_7_0_0
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
