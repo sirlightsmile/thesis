@@ -6,9 +6,18 @@ public class Menu : MonoBehaviour {
 	public static float _GameTime;
 	public static bool _pause;
 	public GameObject _pauseUI;
+	public GameObject _LightText;
 	public static bool _GameOver;
+
 	// Use this for initialization
 	void Awake () {
+		if (PlayerPrefs.GetString ("LightVersion") == "Yes") {
+			_LightText.SetActive(true);
+			RenderSettings.ambientLight = new Color(0.41F, 0.42F, 0.42F, 1.0F);
+		} else {
+			_LightText.SetActive(false);
+			RenderSettings.ambientLight = Color.black;
+		}
 		_GameTime = 0;
 		_GameOver = false;
 		Time.timeScale = 1.0f;
