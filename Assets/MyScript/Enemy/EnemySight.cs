@@ -5,16 +5,10 @@ public class EnemySight : MonoBehaviour {
 	public float fieldOfViewAngle = 130f;
 	//normal 110
 	public bool playerInSight;
-	//public Vector3 personalLastSighting;
-
-	//hear
-	//private NavMeshAgent nav;
-	
 	private SphereCollider _radientOfsense;
 	public GameObject player;
 	private Vector3 previousSighting;
 	private Animator _animator;
-	public GameObject _EnemyPoint;
 
 	void Awake(){
 		_radientOfsense = gameObject.GetComponent<SphereCollider> ();
@@ -62,7 +56,7 @@ public class EnemySight : MonoBehaviour {
 				//if (Physics.Raycast (transform.position + transform.up , direction.normalized, out hit, col.radius)) {
 				Vector3 StartDirection = transform.position + transform.up;
 				StartDirection = StartDirection + (transform.up/2);
-				if (Physics.Raycast (StartDirection, direction.normalized, out hit, _radientOfsense.radius)) {
+				if (Physics.Raycast (StartDirection, direction.normalized*5, out hit, _radientOfsense.radius)) {
 					// ... and if the raycast hits the player...
 					//Debug.DrawRay (transform.position + transform.up ,direction*5,Color.green);
 					Debug.DrawRay (StartDirection ,direction.normalized*5,Color.green);
@@ -75,24 +69,6 @@ public class EnemySight : MonoBehaviour {
 						//playerInSight = false;
 					}
 				}
-			}
-
-
-			//Hearing
-			if(other.GetComponent<OVRPlayerController>()._FastWalk==true && playerInSight==false){
-				//ALERTTTT
-				if(gameObject.GetComponent<EnemyWalkpath>()._SearchingState==true){
-					gameObject.GetComponent<EnemyWalkpath>().enemyFoundPlayer();
-				}
-				if(_EnemyPoint==null){
-				_EnemyPoint = GameObject.Find ("EnemyPoint");
-				}
-				_EnemyPoint.transform.position=new Vector3(other.transform.position.x,1.2f,other.transform.position.z);
-
-				if(gameObject.GetComponent<EnemyWalkpath>()._ALERT!=true){
-					gameObject.GetComponent<EnemyWalkpath>().AlertState();
-				}
-
 			}
 		}
 	}//OnTriggerStay

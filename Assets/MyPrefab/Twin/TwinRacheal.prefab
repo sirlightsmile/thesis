@@ -582,6 +582,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 429472}
   - 137: {fileID: 13711854}
+  - 136: {fileID: 13620128}
   m_Layer: 0
   m_Name: alma:Model001_25_body_0_7_0_0
   m_TagString: Untagged
@@ -1175,8 +1176,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128118}
   m_LocalRotation: {x: 0, y: -.696817815, z: 0, w: .717248142}
-  m_LocalPosition: {x: 34.9219513, y: .942059994, z: -4.34824944}
-  m_LocalScale: {x: 5.3927002, y: 5.3927021, z: 5.3927021}
+  m_LocalPosition: {x: 17.3600006, y: .95347017, z: -5.36000013}
+  m_LocalScale: {x: 5.5, y: 5.5, z: 5.5}
   m_Children:
   - {fileID: 403630}
   - {fileID: 434712}
@@ -1280,6 +1281,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &13620128
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .00289927353
+  m_Height: .0124191558
+  m_Direction: 1
+  m_Center: {x: -.000111491885, y: .00554177398, z: -.000188114413}
 --- !u!137 &13711854
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1445,6 +1459,18 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cfccd2bea5ce5274788672e93cfdc89c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128118}
