@@ -123,7 +123,9 @@
      <Compile Include="Assets\MyScript\Chapter1Event\thenCutScene1.cs" />
      <Compile Include="Assets\MyScript\DestroyTime.cs" />
      <Compile Include="Assets\MyScript\Door.cs" />
+     <Compile Include="Assets\MyScript\EnemyAttack.cs" />
      <Compile Include="Assets\MyScript\EnemyPoint.cs" />
+     <Compile Include="Assets\MyScript\EnemySideAlert.cs" />
      <Compile Include="Assets\MyScript\EnemySight.cs" />
      <Compile Include="Assets\MyScript\EnemyWalkpath.cs" />
      <Compile Include="Assets\MyScript\FaceToEvent.cs" />
@@ -140,6 +142,7 @@
      <Compile Include="Assets\MyScript\PlayerWalkSound.cs" />
      <Compile Include="Assets\MyScript\Prototype\ClueActive.cs" />
      <Compile Include="Assets\MyScript\Prototype\NPCWalk.cs" />
+     <Compile Include="Assets\MyScript\SoundFadeInOut.cs" />
      <Compile Include="Assets\MyScript\ZoneHit.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVROverlay.cs" />
@@ -170,6 +173,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
      <None Include="Assets\Plugins\Android\assets\donotdelete.txt" />
+     <None Include="Assets\Resources\Font\3DTextOneSided.shader.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
@@ -177,6 +181,7 @@
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\Resources\Font\3DText.shader" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />

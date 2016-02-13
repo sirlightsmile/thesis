@@ -16,6 +16,8 @@ public class EnemyWalkpath : MonoBehaviour {
 	private bool _isWalking;
 
 	private GameObject _Player;
+
+	public bool _ALERT;
 	// Use this for initialization
 	void Start () {
 		//when start. is on searching state or not
@@ -46,9 +48,13 @@ public class EnemyWalkpath : MonoBehaviour {
 			}
 			_enemyNav.SetDestination (_Player.transform.position);
 
-		} else {
+		}else{
 		//player not in sight
-			_enemyNav.speed=1;
+				if(_ALERT!=true){
+					_enemyNav.speed=1;
+				}else{
+					_enemyNav.speed=2;
+				}
 			if (_SearchingState == false) {
 				if(_point!=null){
 					_isWalking=true;
@@ -101,15 +107,33 @@ public class EnemyWalkpath : MonoBehaviour {
 		_turnRight = true;
 		yield return new WaitForSeconds(2f);
 		_turnRight = false;
+
+		if (_ALERT == true) {
+			//change sound
+			EnemyClamDown();
+		yield return new WaitForSeconds(3f);
+
+		}
 		_SearchingState = false;
 		_SearchingIdle = true;
 		_isWalking=true;
+
+
 	}//IEnumerator
 
 	//when enemy found player while searching state
-	void enemyFoundPlayer(){
+	public void enemyFoundPlayer(){
 		StopCoroutine(SearchingIdle());
 		_SearchingState = false;
 		_SearchingIdle = true;
 	}//enemyFoundPlayer
+
+	public void AlertState(){
+		_ALERT = true;
+		gameObject.GetComponent<AudioSource> ().Play ();
+	}//AlertState
+
+	void EnemyClamDown(){
+		_ALERT = false;
+	}//clamdown
 }

@@ -384,6 +384,7 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (leftAxisX == 0 && leftAxisY ==0) {
 			if (_isWalking == true) {
+				_isWalking=false;
 				gameObject.GetComponent<PlayerWalkSound>()._playerWalk = false;
 				gameObject.GetComponent<AudioSource> ().Stop();
 			}
@@ -525,6 +526,7 @@ public class OVRPlayerController : MonoBehaviour
 			transform.rotation = Quaternion.Euler(euler);
 		}
 	}
+
 	void OnControllerColliderHit(ControllerColliderHit _col) {
 		if (_col.gameObject.tag == "HiddenChest") {
 			_UIMessage.SetActive(true);
