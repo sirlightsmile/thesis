@@ -130,6 +130,7 @@
      <Compile Include="Assets\MyScript\Enemy\EnemySight.cs" />
      <Compile Include="Assets\MyScript\Enemy\EnemyWalkpath.cs" />
      <Compile Include="Assets\MyScript\Enemy\GirlHear.cs" />
+     <Compile Include="Assets\MyScript\Enemy\GirlPoint.cs" />
      <Compile Include="Assets\MyScript\Enemy\GirlSense.cs" />
      <Compile Include="Assets\MyScript\Enemy\GirlWalkpath.cs" />
      <Compile Include="Assets\MyScript\FaceToEvent.cs" />

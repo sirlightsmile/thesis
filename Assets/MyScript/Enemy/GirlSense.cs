@@ -77,14 +77,23 @@ public class GirlSense : MonoBehaviour {
 	}//OnTriggerStay
 	
 	IEnumerator GirlFoundPlayer(){
+		gameObject.GetComponent<AudioSource> ().Play ();
 		yield return new WaitForSeconds (1f);
 		_player.GetComponent<OVRPlayerController>().enabled=false;
 		yield return new WaitForSeconds (2f);
-		_Enemy.GetComponent<NavMeshAgent>().Warp(_player.transform.position + (transform.forward*3f));
+		if (_Enemy.GetComponent<EnemySight> ().playerInSight == false) {
+			_Enemy.GetComponent<EnemySight> ().GirlSentence = true;
+			_Enemy.GetComponent<EnemySight> ().playerInSight =true;
+			_Enemy.GetComponent<EnemySight>().enabled=false;
+			_Enemy.GetComponent<NavMeshAgent> ().Warp (_player.transform.position + (transform.forward * 3f));
+		}
+		yield return new WaitForSeconds (0.5f);
+		if (_Enemy.GetComponent<EnemySight> ().enabled == false) {
+			_Enemy.GetComponent<EnemyWalkpath>()._playerInSight=true;
+			_Enemy.transform.LookAt (_player.transform);
+		}
+		_Enemy.GetComponent<AudioSource> ().Play ();
 		_PlayerTurn=true;
-		_Enemy.transform.LookAt (_player.transform);
-
-
 
 
 	}

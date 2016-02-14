@@ -10,7 +10,6 @@ public class EnemyWalkpath : MonoBehaviour {
 	//SearchingIdle is for not to run searching state many time
 	private bool _SearchingIdle;
 	public bool _playerInSight;
-	public bool _playerLostSight;
 	private bool _turnLeft;
 	private bool _turnRight;
 	private bool _isWalking;
@@ -29,8 +28,7 @@ public class EnemyWalkpath : MonoBehaviour {
 		_EnemyAnimate = GetComponent<Animator> ();
 		_turnLeft = false;
 		_turnRight = false;
-		_playerInSight = false;
-		_playerLostSight = false;
+	//	_playerInSight = false;
 
 	}
 	
@@ -41,6 +39,7 @@ public class EnemyWalkpath : MonoBehaviour {
 			if(_SearchingState==true){
 				enemyFoundPlayer();
 			}
+			gameObject.GetComponent<Animator>().SetBool ("seePlayer", true);
 			_isWalking=true;
 			_enemyNav.speed=3;
 			if(_Player==null){
@@ -50,6 +49,7 @@ public class EnemyWalkpath : MonoBehaviour {
 
 		}else{
 		//player not in sight
+			gameObject.GetComponent<Animator>().SetBool("seePlayer",false);
 				if(_ALERT!=true){
 					_enemyNav.speed=1;
 				}else{

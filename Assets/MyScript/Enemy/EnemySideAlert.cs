@@ -16,9 +16,11 @@ public class EnemySideAlert : MonoBehaviour {
 				_EnemyAnimator.SetBool ("Attack", true);
 			}
 			//heart beat sound
-		} else if (_col.tag == "Door") {
+
+		} 
+		/*else if (_col.tag == "Door") {
 			//open door automatic ?
-		}
+		}*/
 	}
 
 	//this class for when too close from enemy so enemy hearing player if not sneaking

@@ -5,6 +5,7 @@ public class EnemySight : MonoBehaviour {
 	public float fieldOfViewAngle = 130f;
 	//normal 110
 	public bool playerInSight;
+	public bool GirlSentence;
 	private SphereCollider _radientOfsense;
 	public GameObject player;
 	private Vector3 previousSighting;
@@ -14,22 +15,11 @@ public class EnemySight : MonoBehaviour {
 		_radientOfsense = gameObject.GetComponent<SphereCollider> ();
 		player = GameObject.FindWithTag ("Player");
 		_animator = gameObject.GetComponent<Animator> ();
+		GirlSentence = false;
 		//personaLastSighting =
 	}//Awake
 
 	void Update(){
-		if (playerInSight == true) {
-			_animator.SetBool ("seePlayer", true);
-			GetComponent<EnemyWalkpath>()._playerInSight=playerInSight;
-		} else {
-			_animator.SetBool("seePlayer",false);
-			GetComponent<EnemyWalkpath>()._playerInSight=playerInSight;
-
-			//While Enemy just saw player and lost Enemy will be in alert state
-			//that is _Player Lost Sight State Until he cool down he walk faster.
-			//GetComponent<EnemyWalkpath>()._playerLostSight=true;
-		}
-
 		if (player.activeInHierarchy == false) {
 			//player hidden in time
 			playerInSight=false;
@@ -40,7 +30,7 @@ public class EnemySight : MonoBehaviour {
 	{
 
 		// If the player has entered the trigger sphere...
-		if (other.gameObject == player) {
+		if (other.gameObject == player && GirlSentence == false) {
 			// By default the player is not in sight.
 			Debug.Log("Player in");
 			playerInSight = false;
@@ -56,17 +46,21 @@ public class EnemySight : MonoBehaviour {
 				//if (Physics.Raycast (transform.position + transform.up , direction.normalized, out hit, col.radius)) {
 				Vector3 StartDirection = transform.position + transform.up;
 				StartDirection = StartDirection + (transform.up/2);
-				if (Physics.Raycast (StartDirection, direction.normalized*5, out hit, _radientOfsense.radius)) {
+				if (Physics.Raycast (StartDirection, direction.normalized, out hit, _radientOfsense.radius)) {
 					// ... and if the raycast hits the player...
 					//Debug.DrawRay (transform.position + transform.up ,direction*5,Color.green);
 					Debug.DrawRay (StartDirection ,direction.normalized*5,Color.green);
+					Debug.DrawLine(StartDirection ,hit.point,Color.red);
+
 					if (hit.collider.gameObject.tag == "Player") {
 						// ... the player is in sight.
 							playerInSight = true;
+							gameObject.GetComponent<EnemyWalkpath>()._playerInSight=playerInSight;
 							Debug.Log ("I saw Player");
+							if(gameObject.GetComponent<AudioSource>().isPlaying!=true){
+							gameObject.GetComponent<AudioSource>().Play();
+							}
 							//transform.LookAt(player.transform);
-					}else{
-						//playerInSight = false;
 					}
 				}
 			}
@@ -77,9 +71,10 @@ public class EnemySight : MonoBehaviour {
 	void OnTriggerExit (Collider other)
 	{
 		// If the player leaves the trigger zone...
-		if(other.gameObject == player)
+		if(other.gameObject == player && GirlSentence == false)
 			// ... the player is not in sight.
 			playerInSight = false;
+			gameObject.GetComponent<EnemyWalkpath>()._playerInSight=playerInSight;
 			Debug.Log ("I don't see Player");
 	}//trigger
 

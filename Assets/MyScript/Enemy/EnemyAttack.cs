@@ -6,8 +6,10 @@ public class EnemyAttack : MonoBehaviour {
 	void OnTriggerEnter (Collider other){
 		if (other.tag == "Player") {
 			if(gameObject.GetComponentInParent<EnemySight> ().playerInSight == false){
+
 				gameObject.GetComponentInParent<EnemySight>().playerInSight=true;
 				transform.parent.gameObject.transform.LookAt(other.transform);
+				//animate
 				Animator _EnemyAnimator;
 				_EnemyAnimator = gameObject.GetComponentInParent<Animator> ();
 				if (_EnemyAnimator.GetCurrentAnimatorStateInfo(0).IsTag("attack")!=true){
