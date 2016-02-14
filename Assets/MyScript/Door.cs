@@ -24,24 +24,36 @@ public class Door : MonoBehaviour {
 	}//start
 
 
-	public void DoorInteractive(){
-		if (_isOpen == false && _Locked != true && _isAnimate==false) {
-			_isAnimate=true;
-			OpenDoor ();
-		} else if (_isOpen == true && _Locked != true && _isAnimate==false) {
-			_isAnimate=true;
-			CloseDoor();
+	public void DoorInteractive(string _who){
+		//if it enemy don't care if door lock or not
+		if (_who == "Enemy") {
+			if (_isOpen == false && _isAnimate == false) {
+				_isAnimate = true;
+				OpenDoor ();
+			} else if (_isOpen == true && _isAnimate == false) {
+				_isAnimate = true;
+				CloseDoor ();
+			}
+		
+		} else {
+			if (_isOpen == false && _Locked != true && _isAnimate == false) {
+				_isAnimate = true;
+				OpenDoor ();
+			} else if (_isOpen == true && _Locked != true && _isAnimate == false) {
+				_isAnimate = true;
+				CloseDoor ();
+			}
+			
+			if (_Locked == true && _PlayerGotKey == false) {
+				DoorAS.clip = _doorLockedSound;
+				DoorAS.Play ();
+			} else if (_Locked == true && _PlayerGotKey == true) {
+				DoorAS.clip = _doorUnlockSound;
+				DoorAS.Play ();
+				_Locked = false;
+			}
 		}
-
-		if (_Locked == true && _PlayerGotKey == false) {
-			DoorAS.clip = _doorLockedSound;
-			DoorAS.Play ();
-		} else if (_Locked == true && _PlayerGotKey == true) {
-			DoorAS.clip = _doorUnlockSound;
-			DoorAS.Play ();
-			_Locked=false;
-		}
-	}
+	}//DoorInteractive
 
 	void OpenDoor(){
 		if (_Locked != true && _isOpen==false) {

@@ -18,9 +18,7 @@ public class EnemySideAlert : MonoBehaviour {
 			//heart beat sound
 
 		} 
-		/*else if (_col.tag == "Door") {
-			//open door automatic ?
-		}*/
+	
 	}
 
 	//this class for when too close from enemy so enemy hearing player if not sneaking

@@ -9996,6 +9996,18 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 131484, guid: 1822878598d6b3b4dba63eb93f7535c0, type: 2}
   m_PrefabInternal: {fileID: 742742940}
+--- !u!114 &570682124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570682123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4134178c9478fb548b42ab832474cdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _checkpoint: {fileID: 319466442}
 --- !u!1 &571171464 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 170712, guid: 477285249f9f95249bc9436c75b54acd, type: 2}
@@ -12770,7 +12782,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 11497870, guid: 1822878598d6b3b4dba63eb93f7535c0, type: 2}
+    - target: {fileID: 0}
       propertyPath: _checkpoint
       value: 
       objectReference: {fileID: 319466442}

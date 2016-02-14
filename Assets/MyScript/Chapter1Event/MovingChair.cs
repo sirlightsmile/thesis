@@ -20,7 +20,7 @@ public class MovingChair : MonoBehaviour {
 		_Chair.GetComponent<AudioSource>().Play();
 		yield return new WaitForSeconds (2f);
 		_player.GetComponent<OVRPlayerController> ()._currentDoorActive = _Door;
-		_Door.GetComponent<Door> ().DoorInteractive ();
+		_Door.GetComponent<Door> ().DoorInteractive ("Player");
 		Destroy(this.gameObject);
 		/*
 		_Chair.GetComponent<Animation>().Play();

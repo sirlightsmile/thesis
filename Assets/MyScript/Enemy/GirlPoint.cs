@@ -15,7 +15,7 @@ public class GirlPoint : MonoBehaviour {
 	public bool _ColSearchingState = true;
 	// Use this for initialization
 	void Awake () {
-		_Girl = GameObject.Find ("TwinRacheal");
+		_Girl = GameObject.Find ("TwinRachealAI");
 		//Assign all route to point
 		_routeNum = _RouteMaster.transform.childCount;
 		_route = new GameObject[_routeNum];
@@ -30,7 +30,7 @@ public class GirlPoint : MonoBehaviour {
 	void OnTriggerEnter(Collider _col){
 		if(_col.tag=="Girl"){
 			if(_ColSearchingState==true && _col.gameObject.GetComponentInParent<GirlSense>().girlPlayerInSight==false){
-				_Girl.GetComponentInParent<GirlWalkpath>()._SearchingState=true;
+				_Girl.GetComponent<GirlWalkpath>()._SearchingState=true;
 			}
 			_currentRoute = _routeNum;
 			//random route for girl

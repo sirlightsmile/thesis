@@ -15,13 +15,13 @@ public class CutScene1Control : MonoBehaviour {
 	
 	IEnumerator PlayCutScene1(){
 		yield return new WaitForSeconds(2.5f);
-		_Enemy.GetComponent<Animator> ().SetBool ("seePlayer", true);
+		_Enemy.GetComponent<Animator> ().SetBool ("Attack", true);
 		yield return new WaitForSeconds(2.0f);
-		_Enemy.GetComponent<Animator> ().SetBool ("seePlayer", false);
+		_Enemy.GetComponent<Animator> ().SetBool ("Attack", false);
 		yield return new WaitForSeconds(2.0f);
-		_Enemy.GetComponent<Animator> ().SetBool ("seePlayer", true);
+		_Enemy.GetComponent<Animator> ().SetBool ("Attack", true);
 		yield return new WaitForSeconds(0.5f);
-		_Enemy.GetComponent<Animator> ().SetBool ("seePlayer", false);
+		_Enemy.GetComponent<Animator> ().SetBool ("Attack", false);
 		_box.GetComponent<AudioSource> ().clip = _BreakSound;
 		_box.GetComponent<AudioSource> ().loop = false;
 		_box.GetComponent<AudioSource> ().Play ();
@@ -44,9 +44,9 @@ public class CutScene1Control : MonoBehaviour {
 		yield return new WaitForSeconds(5f);
 		_Enemy.GetComponent<EnemyWalkpath> ().enabled = true;
 		yield return new WaitForSeconds(6f);
-		_Door.GetComponent<Door> ().DoorInteractive ();
+		_Door.GetComponent<Door> ().DoorInteractive ("Enemy");
 		yield return new WaitForSeconds(3f);
-		_Door.GetComponent<Door> ().DoorInteractive ();
+		_Door.GetComponent<Door> ().DoorInteractive ("Enemy");
 		_Enemy.GetComponent<EnemyWalkpath> ().enabled = false;;
 		yield return new WaitForSeconds(3f);
 		//Loading Scene

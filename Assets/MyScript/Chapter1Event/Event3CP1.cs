@@ -13,7 +13,7 @@ public class Event3CP1 : MonoBehaviour {
 		if(_col.tag=="Player"){
 			//close door if it still open
 			if(_door.GetComponent<Door>()._isOpen==true){
-				_door.GetComponent<Door>().DoorInteractive();
+				_door.GetComponent<Door>().DoorInteractive("Player");
 			}
 			_door.GetComponent<Door>()._Locked=true;
 			_door.GetComponent<Door>()._PlayerGotKey=false;

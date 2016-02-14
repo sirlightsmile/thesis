@@ -30,6 +30,5 @@ public class Memories1Control : MonoBehaviour {
 	IEnumerator Memories1Active(){
 		yield return new WaitForSeconds (5f);
 		_enemy.SetActive (true);
-		_Door.GetComponent<Door> ().DoorInteractive ();
 	}
 }

@@ -560,7 +560,7 @@ public class OVRPlayerController : MonoBehaviour
 				if(_col.gameObject.GetComponent<Door>()._Locked==true && _col.gameObject.GetComponent<Door>()._PlayerGotKey==false){
 					_UIMessage.GetComponent<UnityEngine.UI.Text>().text="This door is locked.";
 				}
-				_col.gameObject.GetComponent<Door>().DoorInteractive();
+				_col.gameObject.GetComponent<Door>().DoorInteractive("Player");
 				_currentDoorActive=_col.gameObject;
 			}
 		}
@@ -571,8 +571,9 @@ public class OVRPlayerController : MonoBehaviour
 		if (_col.tag == "DoorObject" || _col.tag == "HiddenChest"){
 			_UIMessage.SetActive (false);
 		}
-		if (_col.name == "DoorZone" && _currentDoorActive != null && _currentDoorActive.GetComponent<Door>()._isAutomaticClose==true ){
-			_currentDoorActive.gameObject.GetComponent<Door>().DoorInteractive();
+		if (_col.name == "DoorZone" && _currentDoorActive != null && _currentDoorActive.GetComponent<Door>()._isAutomaticClose==true
+		    && _currentDoorActive.GetComponent<Door>()._isOpen==true){
+			_currentDoorActive.gameObject.GetComponent<Door>().DoorInteractive("Player");
 			_currentDoorActive=null;
 		}
 	}//CollisionExit

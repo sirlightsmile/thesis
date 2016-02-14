@@ -45,6 +45,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &106552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 449258}
+  - 114: {fileID: 11468638}
+  - 136: {fileID: 13692086}
+  - 54: {fileID: 5435090}
+  m_Layer: 2
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &106820
 GameObject:
   m_ObjectHideFlags: 1
@@ -90,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &109608
 GameObject:
   m_ObjectHideFlags: 1
@@ -771,6 +789,7 @@ Transform:
   - {fileID: 493360}
   - {fileID: 406726}
   - {fileID: 458170}
+  - {fileID: 449258}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &411384
@@ -1045,6 +1064,18 @@ Transform:
   - {fileID: 439336}
   m_Father: {fileID: 434476}
   m_RootOrder: 0
+--- !u!4 &449258
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 411266}
+  m_RootOrder: 6
 --- !u!4 &452970
 Transform:
   m_ObjectHideFlags: 1
@@ -1327,6 +1358,21 @@ Transform:
   - {fileID: 424706}
   m_Father: {fileID: 434476}
   m_RootOrder: 1
+--- !u!54 &5435090
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106552}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!82 &8296694
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1440,6 +1486,18 @@ MonoBehaviour:
   fieldOfViewAngle: 130
   _player: {fileID: 0}
   girlPlayerInSight: 0
+--- !u!114 &11468638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd12acffe97757543bd97b32d0b106ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentDoorEnemyActive: {fileID: 0}
 --- !u!114 &11497884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1488,8 +1546,21 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .0199999996
+  m_Radius: .100000001
   m_Center: {x: 0, y: -1.08000004, z: 0}
+--- !u!136 &13692086
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .600000024
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13710654
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

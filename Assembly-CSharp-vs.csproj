@@ -100,6 +100,7 @@
      <Compile Include="Assets\-FPH\_Scripts\z_Examples\FPH_Example_InteractIHaveObject.cs" />
      <Compile Include="Assets\-FPH\_Scripts\z_Examples\FPH_Example_InteractIUseEquippedObject.cs" />
      <Compile Include="Assets\-FPH\_Scripts\z_Examples\FPH_Example_InteractObject.cs" />
+     <Compile Include="Assets\MyScene\Chapter2\ToFirstFloor.cs" />
      <Compile Include="Assets\MyScript\AnimateToHidden.cs" />
      <Compile Include="Assets\MyScript\CancleClue.cs" />
      <Compile Include="Assets\MyScript\ChangeAmbientLight.cs" />
@@ -130,6 +131,7 @@
      <Compile Include="Assets\MyScript\Enemy\EnemySight.cs" />
      <Compile Include="Assets\MyScript\Enemy\EnemyWalkpath.cs" />
      <Compile Include="Assets\MyScript\Enemy\GirlHear.cs" />
+     <Compile Include="Assets\MyScript\Enemy\GirlHit.cs" />
      <Compile Include="Assets\MyScript\Enemy\GirlPoint.cs" />
      <Compile Include="Assets\MyScript\Enemy\GirlSense.cs" />
      <Compile Include="Assets\MyScript\Enemy\GirlWalkpath.cs" />

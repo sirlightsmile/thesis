@@ -13,7 +13,6 @@ GameObject:
   - 65: {fileID: 6537470}
   - 114: {fileID: 11491884}
   - 82: {fileID: 8228694}
-  - 114: {fileID: 11497870}
   m_Layer: 0
   m_Name: HidingChest
   m_TagString: HiddenChest
@@ -684,18 +683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11497870
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131484}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4134178c9478fb548b42ab832474cdc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _checkpoint: {fileID: 0}
 --- !u!137 &13755578
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

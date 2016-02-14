@@ -3,7 +3,15 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour {
 	private bool _gameOver = false;
+	public GameObject _currentDoorEnemyActive;
 	void OnTriggerEnter (Collider other){
+		if (other.tag == "DoorObject") {
+			//open door automatic
+			if(other.gameObject.GetComponent<Door>()._isOpen==false){
+				other.gameObject.GetComponent<Door>().DoorInteractive("Enemy");
+				_currentDoorEnemyActive=other.gameObject;
+			}
+		}
 		if (other.tag == "Player") {
 			if(gameObject.GetComponentInParent<EnemySight> ().playerInSight == false){
 
@@ -22,7 +30,21 @@ public class EnemyAttack : MonoBehaviour {
 			other.GetComponent<OVRPlayerController>().enabled=false;
 			StartCoroutine(PlayerDead());
 		}
-	}
+	}//TriggerEnter
+
+	void OnTriggerExit (Collider _col){
+		if (_col.name == "DoorZone" && _currentDoorEnemyActive!=null ){
+
+			if(_currentDoorEnemyActive.GetComponent<Door>()._isAutomaticClose==true
+		    && _currentDoorEnemyActive.GetComponent<Door>()._isOpen==true
+		    && _col.transform.parent.name == _currentDoorEnemyActive.transform.parent.name){
+
+			_currentDoorEnemyActive.gameObject.GetComponent<Door>().DoorInteractive("Enemy");
+			_currentDoorEnemyActive=null;
+
+			}
+		}
+	}//TriggerExit
 
 	IEnumerator PlayerDead(){
 		yield return new WaitForSeconds (1f);

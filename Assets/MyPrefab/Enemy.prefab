@@ -699,8 +699,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 428414}
-  - 136: {fileID: 13608130}
   - 114: {fileID: 11438670}
+  - 54: {fileID: 5482178}
+  - 136: {fileID: 13696152}
   m_Layer: 2
   m_Name: AttackRange
   m_TagString: Untagged
@@ -1361,6 +1362,21 @@ Transform:
   - {fileID: 482938}
   m_Father: {fileID: 461506}
   m_RootOrder: 2
+--- !u!54 &5482178
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193918}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!82 &8281512
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1592,6 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8459a441c8984ef4c9ac61dc4c53b87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentDoorEnemyActive: {fileID: 0}
 --- !u!114 &11446064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1605,7 +1622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _point: {fileID: 0}
   _SearchingSpeed: 12
-  _SearchingState: 1
+  _SearchingState: 0
   _playerInSight: 0
   _ALERT: 0
 --- !u!114 &11499556
@@ -1671,19 +1688,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.30000019
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &13608130
+--- !u!136 &13696152
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193918}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .620000005
   m_Height: 2.26999998
   m_Direction: 1
-  m_Center: {x: 0, y: .75, z: 0}
+  m_Center: {x: 0, y: 1.21000004, z: 0}
 --- !u!137 &13717578
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
