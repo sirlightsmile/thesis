@@ -271,9 +271,9 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (_isSneaking == true) {
 			//used to be MoveScaleMultiplier 
-			Acceleration=0.04f;
+			Acceleration=0.05f;
 		} else if (_isSneaking == false && _FastWalk == false){
-			Acceleration=0.08f;
+			Acceleration=0.09f;
 		}
 
 		//Fast Walk

@@ -73,7 +73,7 @@ public class GirlWalkpath : MonoBehaviour {
 		_GirlAnimate.SetBool ("Walk", false);
 		yield return new WaitForSeconds(2f);
 		_GirlAnimate.SetBool ("Search", true);
-		gameObject.GetComponent<GirlSense> ().fieldOfViewAngle = 160f;
+		gameObject.GetComponent<GirlSense> ().fieldOfViewAngle = 150f;
 		yield return new WaitForSeconds(5f);
 		_GirlAnimate.SetBool ("Search", false);
 		gameObject.GetComponent<GirlSense> ().fieldOfViewAngle = 130f;
@@ -83,9 +83,9 @@ public class GirlWalkpath : MonoBehaviour {
 		_isWalking=true;		
 		
 	}//IEnumerator
-	
+
 	//when enemy found player while searching state
-	void GirlFoundPlayer(){
+	public void GirlFoundPlayer(){
 		StopCoroutine(GirlSearchingIdle());
 		_SearchingState = false;
 		_SearchingIdle = true;

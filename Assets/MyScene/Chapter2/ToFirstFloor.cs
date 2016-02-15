@@ -2,12 +2,29 @@
 using System.Collections;
 
 public class ToFirstFloor : MonoBehaviour {
-
-	void OnTriggerEnter(Collider _col){
+	public bool _allow;
+	public string _reason;
+	public GameObject _ActionMessage;
+	void OnTriggerStay(Collider _col){
 		if (_col.tag == "Player") {
-			PlayerPrefs.SetString("NextFromLoad","FirstFloor");
-			Application.LoadLevel("LoadScene");
+			if(_allow==true){
+				PlayerPrefs.SetString("NextFromLoad","FirstFloor");
+				Application.LoadLevel("LoadScene");
+			}else{
+				if(_ActionMessage==null){
+					Debug.Log ("action message missing");
+				}
+				_ActionMessage.GetComponent<UnityEngine.UI.Text>().text=_reason;
+				_ActionMessage.SetActive(true);
+
+			}
 		}
-	}//TriggerEnter
+	}//TriggerStay
+
+	void OnTriggerExit(Collider _col){
+		if (_col.tag == "Player") {
+			_ActionMessage.SetActive(false);
+		}
+	}//TriggerStay
 
 }

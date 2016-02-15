@@ -37,9 +37,10 @@ public class SoundFadeInOut : MonoBehaviour {
 
 	void FadeIn(){
 		if (_AS.volume < 1f) {
-			_currentVolume+=0.2f*Time.deltaTime;
+			_currentVolume+=0.1f*Time.deltaTime;
 			if(_currentVolume >=1f){
 				_currentVolume=1f;
+				_done=true;
 			}
 			_AS.volume=_currentVolume;
 		}
@@ -49,6 +50,7 @@ public class SoundFadeInOut : MonoBehaviour {
 			_currentVolume-=0.2f*Time.deltaTime;
 			if(_currentVolume <=0f){
 				_currentVolume=0f;
+				_done=true;
 			}
 			_AS.volume-=_currentVolume;
 			

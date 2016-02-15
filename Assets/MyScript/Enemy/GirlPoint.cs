@@ -10,12 +10,10 @@ public class GirlPoint : MonoBehaviour {
 	private int _currentRoute=0;
 	//is moving to _route num forward or backward
 	private bool _forward;
-	public GameObject _Girl;
 	//if col with point enemy will do searching state or not
 	public bool _ColSearchingState = true;
 	// Use this for initialization
 	void Awake () {
-		_Girl = GameObject.Find ("TwinRachealAI");
 		//Assign all route to point
 		_routeNum = _RouteMaster.transform.childCount;
 		_route = new GameObject[_routeNum];
@@ -30,7 +28,7 @@ public class GirlPoint : MonoBehaviour {
 	void OnTriggerEnter(Collider _col){
 		if(_col.tag=="Girl"){
 			if(_ColSearchingState==true && _col.gameObject.GetComponentInParent<GirlSense>().girlPlayerInSight==false){
-				_Girl.GetComponent<GirlWalkpath>()._SearchingState=true;
+				_col.gameObject.GetComponentInParent<GirlWalkpath>()._SearchingState=true;
 			}
 			_currentRoute = _routeNum;
 			//random route for girl

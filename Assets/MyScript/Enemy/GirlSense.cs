@@ -10,12 +10,14 @@ public class GirlSense : MonoBehaviour {
 	private SphereCollider _radientOfsenseG;
 	private bool _Killed;
 	private bool _PlayerTurn;
-	private GameObject _Enemy;
+	public GameObject _Enemy;
 
 	void Awake(){
 		_Killed = false;
 		_PlayerTurn = false;
-		_Enemy = GameObject.Find ("Enemy");
+		if (_Enemy == null) {
+			_Enemy = GameObject.Find ("Enemy");
+		}
 		_radientOfsenseG = gameObject.GetComponent<SphereCollider> ();
 		_player = GameObject.FindWithTag ("Player");
 		_animator = gameObject.GetComponent<Animator> ();
@@ -81,6 +83,9 @@ public class GirlSense : MonoBehaviour {
 		yield return new WaitForSeconds (1f);
 		_player.GetComponent<OVRPlayerController>().enabled=false;
 		yield return new WaitForSeconds (2f);
+		if (_Enemy.activeSelf == false) {
+			_Enemy.SetActive(true);
+		}
 		if (_Enemy.GetComponent<EnemySight> ().playerInSight == false) {
 			_Enemy.GetComponent<EnemySight> ().GirlSentence = true;
 			_Enemy.GetComponent<EnemySight> ().playerInSight =true;

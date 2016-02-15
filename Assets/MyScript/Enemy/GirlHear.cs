@@ -5,6 +5,31 @@ public class GirlHear : MonoBehaviour {
 	public GameObject _EnemyPoint;
 	public GameObject _Enemy;
 
+	//she will turn to that point;
+	void OnTriggerStay (Collider other)
+	{		
+		if (other.gameObject.tag =="Player") {			
+			//Hearing
+			if(other.gameObject.GetComponent<OVRPlayerController>()._FastWalk==true && 
+			   other.gameObject.GetComponent<OVRPlayerController>()._isWalking==true &&
+			   gameObject.GetComponentInParent<GirlSense>().girlPlayerInSight==false){
+				//ALERTTTT
+				var lookPos = other.transform.position - transform.parent.position;
+				lookPos.y = 0;
+				var rotation = Quaternion.LookRotation(lookPos);
+				transform.parent.rotation = Quaternion.Slerp(transform.parent.rotation, rotation, Time.deltaTime * 10f);
+				
+				if(gameObject.GetComponentInParent<GirlWalkpath>()._SearchingState==false){
+					gameObject.GetComponentInParent<GirlWalkpath>()._SearchingState=true;
+				}
+				
+			}
+		}
+	}//OnTriggerStay
+
+
+
+	/* style that let enemy check that point
 	void OnTriggerStay (Collider other)
 	{		
 		if(_EnemyPoint==null){
@@ -38,4 +63,5 @@ public class GirlHear : MonoBehaviour {
 			}
 		}
 	}//OnTriggerStay
+	*/
 }
