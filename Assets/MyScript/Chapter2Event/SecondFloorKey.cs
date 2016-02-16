@@ -13,19 +13,21 @@ public class SecondFloorKey : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate(){
-		if (_canGet == true && _key.activeSelf!=false) {
-			GetSecondFloorKey();
+		if (_canGet == true && _key.activeSelf != false) {
+			GetSecondFloorKey ();
 		}
 	}
-	void OnTriggerEnter(Collider _col){
+	void OnTriggerStay(Collider _col){
 		if (_col.tag == "Player" && _key.activeSelf!=false && _canGet==true) {
 			_ActionClueUI.SetActive(true);
 		}
 	}//triggerEnter
 	
 	void OnTriggerExit(Collider _col){
-		_canGet = false;
-		_ActionClueUI.SetActive(false);
+		if (_col.tag == "Player") {
+			_canGet = false;
+			_ActionClueUI.SetActive (false);
+		}
 	}//triggerExit
 	
 	void GetSecondFloorKey(){

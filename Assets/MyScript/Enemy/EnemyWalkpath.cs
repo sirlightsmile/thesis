@@ -130,7 +130,9 @@ public class EnemyWalkpath : MonoBehaviour {
 
 	public void AlertState(){
 		_ALERT = true;
-		gameObject.GetComponent<AudioSource> ().Play ();
+		if (gameObject.GetComponent<AudioSource> ().isPlaying == false) {
+			gameObject.GetComponent<AudioSource> ().Play ();
+		}
 	}//AlertState
 
 	void EnemyClamDown(){

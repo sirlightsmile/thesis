@@ -5,9 +5,11 @@ public class EventC2p1 : MonoBehaviour {
 	public GameObject _soundSource;
 	public GameObject _Door;
 
-	void OnTriggerExit(){
-		StartCoroutine (C2p1Active ());
-		gameObject.GetComponent<BoxCollider> ().enabled = false;
+	void OnTriggerExit(Collider _col){
+		if (_col.tag == "Player") {
+			StartCoroutine (C2p1Active ());
+			gameObject.GetComponent<BoxCollider> ().enabled = false;
+		}
 	}
 	
 	IEnumerator C2p1Active(){
