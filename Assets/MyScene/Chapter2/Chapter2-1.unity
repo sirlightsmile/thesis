@@ -7552,7 +7552,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 441646, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.8100004
+      value: 10.8000002
       objectReference: {fileID: 0}
     - target: {fileID: 441646, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7560,7 +7560,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441646, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .560000002
+      value: .449999988
       objectReference: {fileID: 0}
     - target: {fileID: 441646, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7592,12 +7592,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13597310, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
       propertyPath: m_Radius
-      value: 3.70000005
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 13553080, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
       propertyPath: m_Radius
-      value: 5.80000019
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 157240, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b8f43ede61a396438ed7f4a6003d36e, type: 2}
   m_IsPrefabParent: 0
@@ -8766,7 +8771,7 @@ GameObject:
   m_Layer: 0
   m_Name: GirlRoute1
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4476612413928447662, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -14390,7 +14395,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 455464, guid: 02a89b8a790181b4390676ecb4638222, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 30.0900002
+      value: 29.9200001
       objectReference: {fileID: 0}
     - target: {fileID: 455464, guid: 02a89b8a790181b4390676ecb4638222, type: 2}
       propertyPath: m_LocalPosition.y
@@ -14398,7 +14403,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455464, guid: 02a89b8a790181b4390676ecb4638222, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -13.6700001
+      value: -13.6199999
       objectReference: {fileID: 0}
     - target: {fileID: 455464, guid: 02a89b8a790181b4390676ecb4638222, type: 2}
       propertyPath: m_LocalRotation.x
@@ -17737,7 +17742,7 @@ GameObject:
   m_Layer: 0
   m_Name: GirlRoute3
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4476612413928447662, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -18565,7 +18570,7 @@ GameObject:
   m_Layer: 0
   m_Name: GirlRoute4
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4476612413928447662, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -19012,6 +19017,10 @@ Prefab:
       propertyPath: _UIMessage
       value: 
       objectReference: {fileID: 2035489716}
+    - target: {fileID: 106824, guid: f874580c832b2aa46884d487a71c9e8a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f874580c832b2aa46884d487a71c9e8a, type: 2}
   m_IsPrefabParent: 0
@@ -24328,7 +24337,7 @@ GameObject:
   m_Layer: 0
   m_Name: GirlRoute2
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4476612413928447662, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24929,6 +24938,15 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 199414, guid: 3965bf0a2e3a03045bc2108172ef3c95, type: 2}
+      propertyPath: m_Name
+      value: GirlAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 199414, guid: 3965bf0a2e3a03045bc2108172ef3c95, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3965bf0a2e3a03045bc2108172ef3c95, type: 2}
   m_IsPrefabParent: 0
