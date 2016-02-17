@@ -102,6 +102,7 @@ public class OVRPlayerController : MonoBehaviour
 	public bool _FastWalk;
 	public bool _isWalking;
 	public GameObject _currentDoorActive;
+	public bool _PlayerGotFire;
 
 	void Start()
 	{

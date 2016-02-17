@@ -10,6 +10,7 @@ public class SecondFloorKey : MonoBehaviour {
 	public GameObject _KeyUItext;
 	public GameObject _ActionClueUI;
 	public GameObject _CheckPoint;
+	public GameObject _Hint;
 
 	// Update is called once per frame
 	void FixedUpdate(){
@@ -33,7 +34,6 @@ public class SecondFloorKey : MonoBehaviour {
 	void GetSecondFloorKey(){
 		if (OVRGamepadController.GPC_GetButtonDown(OVRGamepadController.Button.B)){
 			_ActionClueUI.SetActive(false);
-			_key.SetActive(false);
 			_KeyUI.SetActive(true);
 			_KeyUItext.SetActive(true);
 			_Bedroom1Door.GetComponent<Door>()._PlayerGotKey=true;

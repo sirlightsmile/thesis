@@ -13,7 +13,8 @@ public class EventC2p3 : MonoBehaviour {
 	public GameObject _Checkpoint;
 
 	void FixedUpdate(){
-		if (_TargetDoor.GetComponent<AudioSource> ().isPlaying == true &&_PlayerActiveDoor==false) {
+		if (_TargetDoor.GetComponent<AudioSource> ().isPlaying == true 
+		    &&_PlayerActiveDoor==false && _PlayerActiveEvent==true) {
 			_PlayerActiveDoor=true;
 			StartCoroutine(C2p3ActivePart2());
 		}
@@ -22,6 +23,7 @@ public class EventC2p3 : MonoBehaviour {
 	void OnTriggerExit(Collider _col){
 		if (_col.tag == "Player" && _PlayerActiveEvent==false) {
 			_PlayerActiveEvent=true;
+			_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Follow white women.";
 			StartCoroutine(C2p3Active());
 		}
 	}//TriggerExit
@@ -35,7 +37,7 @@ public class EventC2p3 : MonoBehaviour {
 	}
 
 	IEnumerator C2p3ActivePart2(){
-		_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Find Key.";
+		_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Find Key to open door.";
 		yield return new WaitForSeconds(3f);
 		_AIracheal.SetActive (true);
 		_EventLook.transform.position = _AIracheal.transform.position;

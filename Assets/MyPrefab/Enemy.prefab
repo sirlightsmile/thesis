@@ -489,7 +489,7 @@ GameObject:
   m_Layer: 2
   m_Name: Enemy
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -969,8 +969,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157240}
-  m_LocalRotation: {x: 0, y: .998960733, z: 0, w: -.0455789492}
-  m_LocalPosition: {x: 11.8999996, y: .953469515, z: 4.26000023}
+  m_LocalRotation: {x: -.00284828502, y: .999864101, z: -.000306145113, w: .0162399523}
+  m_LocalPosition: {x: 10.8000002, y: .879999995, z: .449999988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436276}
@@ -1650,7 +1650,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6.55000019
+  m_Radius: 4.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13560240
 SphereCollider:
@@ -1686,7 +1686,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.30000019
+  m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13696152
 CapsuleCollider:

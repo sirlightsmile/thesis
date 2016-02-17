@@ -120,13 +120,16 @@
      <Compile Include="Assets\MyScript\Chapter1Event\Tutorial1.cs" />
      <Compile Include="Assets\MyScript\Chapter1Event\Tutorial2.cs" />
      <Compile Include="Assets\MyScript\Chapter1Event\thenCutScene1.cs" />
-     <Compile Include="Assets\MyScript\Chapter2Event\CutScene2Active.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\CutScene2Saw.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\EventC2p1.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\EventC2p2.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\EventC2p3.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\EventC2p4.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\FirePickUp.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\Fireplace1Active.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\KeyFound.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\SecondFloorKey.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\toCutScene2.cs" />
      <Compile Include="Assets\MyScript\CheckPoint.cs" />
      <Compile Include="Assets\MyScript\DestroyTime.cs" />
      <Compile Include="Assets\MyScript\Enemy\EnemyAttack.cs" />
