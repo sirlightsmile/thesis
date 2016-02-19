@@ -321,14 +321,16 @@ public class OVRPlayerController : MonoBehaviour
 
 		Vector3 euler = transform.rotation.eulerAngles;
 
-		bool curHatLeft = OVRGamepadController.GPC_GetButton(OVRGamepadController.Button.LeftShoulder);
+		bool curHatLeft = OVRGamepadController.GPC_GetButtonDown(OVRGamepadController.Button.LeftShoulder);
 
+		
 		if (curHatLeft && !prevHatLeft)
 			euler.y -= RotationRatchet;
 
 		prevHatLeft = curHatLeft;
 
-		bool curHatRight = OVRGamepadController.GPC_GetButton(OVRGamepadController.Button.RightShoulder);
+
+		bool curHatRight = OVRGamepadController.GPC_GetButtonDown(OVRGamepadController.Button.RightShoulder);
 
 		if(curHatRight && !prevHatRight)
 			euler.y += RotationRatchet;

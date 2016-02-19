@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerRaycast : MonoBehaviour {
 	public LayerMask _targetLayerMask;
+	public GameObject _ClueMessage;
 	public static bool _clueHit;
 
 	void Start(){
@@ -27,6 +28,17 @@ public class PlayerRaycast : MonoBehaviour {
 			if(hit.collider.tag=="Clue"){
 				Debug.DrawRay (transform.position, fwd, Color.red);
 				hit.transform.SendMessage ("HitByRay");
+			}
+			if(hit.collider.tag=="ClueMessage" && _ClueMessage!=null){
+				Debug.DrawRay (transform.position, fwd, Color.red);
+				hit.transform.SendMessage ("HitByRay");
+				if(_ClueMessage.activeSelf==false){
+					_ClueMessage.SetActive(true);
+				}
+			}else{
+				if(_ClueMessage.activeSelf==true){
+					_ClueMessage.SetActive(false);
+				}
 			}
 		}
 	}//update

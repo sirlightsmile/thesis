@@ -8,7 +8,6 @@ public class Fireplace1Active : MonoBehaviour {
 	public GameObject _Flame;
 	public GameObject _Renai;
 	public GameObject _BloodClue;
-	public GameObject _Hint;
 	public GameObject _EventLook;
 
 	void OnTriggerStay(Collider _col){
@@ -17,6 +16,9 @@ public class Fireplace1Active : MonoBehaviour {
 				_ActionMessage.GetComponent<UnityEngine.UI.Text>().text="Press B : Light fire.";
 				_ActionMessage.SetActive(true);
 				SetFire(_col.gameObject);
+			}else if (_col.GetComponent<OVRPlayerController>()._PlayerGotFire==false && _FireLit==false){
+				_ActionMessage.GetComponent<UnityEngine.UI.Text>().text="Need fuel to light fire.";
+				_ActionMessage.SetActive(true);
 			}
 		}
 	}//TriggerStay
@@ -45,6 +47,7 @@ public class Fireplace1Active : MonoBehaviour {
 		yield return new WaitForSeconds (2f);
 		_Renai.GetComponent<AudioSource> ().Play ();
 		_Renai.GetComponent<NPCWalktoTarget>().enabled=true;
+		_Renai.gameObject.layer = 2;
 		if (_EventLook == null) {
 			_EventLook=GameObject.Find("EventLook");
 		}
@@ -53,7 +56,6 @@ public class Fireplace1Active : MonoBehaviour {
 		FaceToEvent._turning = true;
 		yield return new WaitForSeconds (1f);
 		FaceToEvent._turning = false;
-		_Hint.GetComponent<UnityEngine.UI.Text> ().text = "Hint : Searching for clue in bedroom.";
 		_BloodClue.SetActive (true);
 
 	}

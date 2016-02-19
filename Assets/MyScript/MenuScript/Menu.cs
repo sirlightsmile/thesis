@@ -13,9 +13,11 @@ public class Menu : MonoBehaviour {
 	void Awake () {
 		if (PlayerPrefs.GetString ("LightVersion") == "Yes") {
 			_LightText.SetActive(true);
-			RenderSettings.ambientLight = new Color(0.41F, 0.42F, 0.42F, 1.0F);
-		} else {
+			RenderSettings.ambientLight = new Color(0.42F, 0.42F, 0.42F, 1.0F);
+		} else if (PlayerPrefs.GetString ("LightVersion") == "No"){
 			_LightText.SetActive(false);
+			//secondFloor
+			//RenderSettings.ambientLight = new Color(0.05F, 0.05F, 0.05F, 1.0F);
 			RenderSettings.ambientLight = Color.black;
 		}
 		_GameTime = 0;

@@ -2,16 +2,23 @@
 using System.Collections;
 
 public class EnemyAttack : MonoBehaviour {
-	private bool _gameOver = false;
 	public GameObject _currentDoorEnemyActive;
 	void OnTriggerEnter (Collider other){
 		if (other.tag == "DoorObject") {
 			//open door automatic
 			if(other.gameObject.GetComponent<Door>()._isOpen==false){
 				other.gameObject.GetComponent<Door>().DoorInteractive("Enemy");
+
 				_currentDoorEnemyActive=other.gameObject;
+
 			}
-		}
+			//fix bug run toward and make door away
+			if(other.gameObject.GetComponent<Door>()._isOpen==true
+			   && gameObject.GetComponentInParent<EnemySight> ().playerInSight == true){
+				other.gameObject.GetComponent<BoxCollider>().isTrigger=true;
+			}
+		}//with door
+
 		if (other.tag == "Player") {
 			if(gameObject.GetComponentInParent<EnemySight> ().playerInSight == false){
 
@@ -44,6 +51,11 @@ public class EnemyAttack : MonoBehaviour {
 
 			}
 		}
+		/*
+		if(_col.tag=="DoorObject" && _col.gameObject.GetComponent<Door>()._isOpen==true && _col.gameObject.GetComponent<BoxCollider>().isTrigger==false
+		   && gameObject.GetComponentInParent<EnemySight> ().playerInSight == true){
+			_col.gameObject.GetComponent<BoxCollider>().isTrigger=false;
+		}*/
 	}//TriggerExit
 
 	IEnumerator PlayerDead(){

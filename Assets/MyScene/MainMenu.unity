@@ -727,6 +727,7 @@ MonoBehaviour:
   _highlight: {fileID: 21300000, guid: bd507c9379107435baad20d495662cbc, type: 3}
   _normal: {fileID: 21300000, guid: 4faacf8fcefcd408ab1b334b1f570998, type: 3}
   _menuReady: 0
+  _ChapterSelect: 0
 --- !u!224 &1210048791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1269,7 +1270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: New Game
 --- !u!222 &2042352388
 CanvasRenderer:
   m_ObjectHideFlags: 0

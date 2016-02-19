@@ -11,7 +11,7 @@ public class EventC2p4 : MonoBehaviour {
 			_SoundSource.GetComponent<AudioSource>().Play();
 			_Checkpoint.GetComponent<CheckPoint>()._SaveScene="Chapter2-3";
 			_Checkpoint.SetActive(true);
-			_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Light fire in fireplace.";
+			_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Searching for clue.";
 			Destroy(this.gameObject);
 		}
 	}//TriggerEnter

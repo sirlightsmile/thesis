@@ -56,7 +56,6 @@ public class Door : MonoBehaviour {
 	}//DoorInteractive
 
 	void OpenDoor(){
-		if (_Locked != true && _isOpen==false) {
 			//sound
 			DoorAS.clip=_doorOpenSound;
 			DoorAS.Play ();
@@ -65,7 +64,6 @@ public class Door : MonoBehaviour {
 			_isOpen=true;
 			gameObject.GetComponent<Animation>().Play("FPH_Door_Open");
 			StartCoroutine(AnimateDoorOpen());
-		}
 	}//openDoor
 
 	void CloseDoor(){
@@ -92,5 +90,4 @@ public class Door : MonoBehaviour {
 		_isAnimate = false;
 		gameObject.GetComponent<BoxCollider> ().isTrigger = false;
 	}
-
 }

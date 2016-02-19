@@ -9,12 +9,10 @@ public class EnemySight : MonoBehaviour {
 	private SphereCollider _radientOfsense;
 	public GameObject player;
 	private Vector3 previousSighting;
-	private Animator _animator;
 
 	void Awake(){
 		_radientOfsense = gameObject.GetComponent<SphereCollider> ();
 		player = GameObject.FindWithTag ("Player");
-		_animator = gameObject.GetComponent<Animator> ();
 		GirlSentence = false;
 		//personaLastSighting =
 	}//Awake

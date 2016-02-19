@@ -18,6 +18,7 @@ TagManager:
   - Clue
   - Master
   - Girl
+  - ClueMessage
   layers:
   - Default
   - TransparentFX

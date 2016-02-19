@@ -6,11 +6,13 @@ public class GirlSense : MonoBehaviour {
 	public GameObject _player;
 	public bool girlPlayerInSight;
 	private Vector3 previousSighting;
-	private Animator _animator;
 	private SphereCollider _radientOfsenseG;
 	private bool _Killed;
 	private bool _PlayerTurn;
 	public GameObject _Enemy;
+	public GameObject _EnemyUI;
+	public bool _EnemyBySide = false;
+	private Vector3 PlayerBack;
 
 	void Awake(){
 		_Killed = false;
@@ -20,21 +22,35 @@ public class GirlSense : MonoBehaviour {
 		}
 		_radientOfsenseG = gameObject.GetComponent<SphereCollider> ();
 		_player = GameObject.FindWithTag ("Player");
-		_animator = gameObject.GetComponent<Animator> ();
 	}//Awake
 
 	void OnTriggerStay (Collider other)
 	{
-		if(_PlayerTurn==true){
-			Debug.Log("Turn to enemy");
-			var lookPosP = _Enemy.transform.position - other.transform.position;
-			lookPosP.y = 0;
-			var rotationP = Quaternion.LookRotation(lookPosP);
-			other.transform.rotation = Quaternion.Slerp(other.transform.rotation, rotationP, Time.deltaTime * 10f);
+		//enemy near girl
+		if (other.tag == "Enemy") {
+			_EnemyBySide=true;
 		}
+
 		// If the player has entered the trigger sphere...
 		if (other.gameObject == _player) {
-			Debug.Log ("I SENSE Player");
+
+			//turn
+			if (_PlayerTurn == true) {
+				if (_EnemyBySide == true) {
+					Debug.Log ("Turn to enemy");
+					var lookPosP = _Enemy.transform.position - other.transform.position;
+					lookPosP.y = 0;
+					var rotationP = Quaternion.LookRotation (lookPosP);
+					other.transform.rotation = Quaternion.Slerp (other.transform.rotation, rotationP, Time.deltaTime * 10f);
+				} else {
+					Debug.Log ("Turn to Back");
+					
+					var lookPosP = PlayerBack;
+					lookPosP.y = 0;
+					var rotationP = Quaternion.LookRotation (lookPosP);
+					other.transform.rotation = Quaternion.Slerp (other.transform.rotation, rotationP, Time.deltaTime * 10f);
+				}
+			}
 
 			girlPlayerInSight = false;
 			
@@ -77,28 +93,45 @@ public class GirlSense : MonoBehaviour {
 			}
 		}
 	}//OnTriggerStay
-	
+
+	void OnTriggerExit (Collider other)
+	{
+		// If the player leaves the trigger zone...
+		if(other.gameObject == _player)
+			// ... the player is not in sight.
+			girlPlayerInSight = false;
+		gameObject.GetComponent<GirlWalkpath>()._playerInSight=girlPlayerInSight;
+		Debug.Log ("I don't sense Player");
+		//enemy near girl
+		if (other.tag == "Enemy") {
+			_EnemyBySide=false;
+		}
+	}//trigger
+
 	IEnumerator GirlFoundPlayer(){
 		gameObject.GetComponent<AudioSource> ().Play ();
-		yield return new WaitForSeconds (1f);
-		_player.GetComponent<OVRPlayerController>().enabled=false;
-		yield return new WaitForSeconds (2f);
-		if (_Enemy.activeSelf == false) {
-			_Enemy.SetActive(true);
-		}
-		if (_Enemy.GetComponent<EnemySight> ().playerInSight == false) {
-			_Enemy.GetComponent<EnemySight> ().GirlSentence = true;
-			_Enemy.GetComponent<EnemySight> ().playerInSight =true;
-			_Enemy.GetComponent<EnemySight>().enabled=false;
-			_Enemy.GetComponent<NavMeshAgent> ().Warp (_player.transform.position + (transform.forward * 3f));
-		}
 		yield return new WaitForSeconds (0.5f);
-		if (_Enemy.GetComponent<EnemySight> ().enabled == false) {
-			_Enemy.GetComponent<EnemyWalkpath>()._playerInSight=true;
-			_Enemy.transform.LookAt (_player.transform);
+		_player.GetComponent<OVRPlayerController>().enabled=false;
+		if (_EnemyBySide == true) {
+			if (_Enemy.GetComponent<EnemySight> ().playerInSight == false) {
+				_Enemy.GetComponent<EnemySight> ().GirlSentence = true;
+				_Enemy.GetComponent<EnemySight> ().playerInSight =true;
+				_Enemy.GetComponent<EnemyWalkpath>()._playerInSight=true;
+			}
+		} else {
+			_Enemy.SetActive (false);
+
 		}
-		_Enemy.GetComponent<AudioSource> ().Play ();
+		yield return new WaitForSeconds (2f);
+		PlayerBack = -_player.transform.forward;
 		_PlayerTurn=true;
+		yield return new WaitForSeconds (0.5f);
+		if (_EnemyBySide == false) {
+			_EnemyUI.SetActive (true);
+		}
+		yield return new WaitForSeconds (1f);
+		Menu._GameOver = true;
+
 
 
 	}

@@ -19,8 +19,13 @@ public class SecondFloorKey : MonoBehaviour {
 		}
 	}
 	void OnTriggerStay(Collider _col){
-		if (_col.tag == "Player" && _key.activeSelf!=false && _canGet==true) {
-			_ActionClueUI.SetActive(true);
+		if(_col.tag=="Player"){
+
+		gameObject.layer=2;		
+			if (_key.activeSelf!=false && _canGet==true) {
+				_ActionClueUI.GetComponent<UnityEngine.UI.Text>().text="Press B : Pick up";
+				_ActionClueUI.SetActive(true);
+			}
 		}
 	}//triggerEnter
 	
@@ -34,6 +39,7 @@ public class SecondFloorKey : MonoBehaviour {
 	void GetSecondFloorKey(){
 		if (OVRGamepadController.GPC_GetButtonDown(OVRGamepadController.Button.B)){
 			_ActionClueUI.SetActive(false);
+			_key.SetActive(false);
 			_KeyUI.SetActive(true);
 			_KeyUItext.SetActive(true);
 			_Bedroom1Door.GetComponent<Door>()._PlayerGotKey=true;

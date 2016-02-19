@@ -731,7 +731,7 @@ GameObject:
   m_Layer: 2
   m_Name: TwinRachealAI
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -780,7 +780,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199414}
   m_LocalRotation: {x: 0, y: .999996305, z: 0, w: .00274362089}
-  m_LocalPosition: {x: 15.8800001, y: 2.1099999, z: -2.50999999}
+  m_LocalPosition: {x: 15.6300001, y: 2.1099999, z: -2.48000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436856}

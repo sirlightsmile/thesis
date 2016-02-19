@@ -8,6 +8,7 @@ public class FirePickUp : MonoBehaviour {
 	void OnTriggerStay(Collider _col){
 		if (_col.tag == "Player") {
 			if(_col.GetComponent<OVRPlayerController>()._PlayerGotFire==false){
+				_ActionMessage.GetComponent<UnityEngine.UI.Text>().text="Press B : Pick up";
 				_ActionMessage.SetActive(true);
 				GetFire(_col.gameObject);
 			}

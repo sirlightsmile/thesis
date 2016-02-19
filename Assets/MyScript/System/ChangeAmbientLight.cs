@@ -6,14 +6,22 @@ public class ChangeAmbientLight : MonoBehaviour {
 	public GameObject _text;
 	// Use this for initialization
 	void Start () {
-       //PlayerPrefs.GetString ("LightVersion")
-		if ( _isLightVersion == true) {
-			PlayerPrefs.SetString ("LightVersion","Yes");
-			_text.SetActive(true);
+
+		if (PlayerPrefs.GetString ("LightVersion") != null) {
+			if(PlayerPrefs.GetString ("LightVersion")=="Yes"){
+				_text.SetActive (true);
+			}else{
+				_text.SetActive (false);
+			}
 		} else {
-			PlayerPrefs.SetString ("LightVersion","No");
-			_text.SetActive(false);
-			RenderSettings.ambientLight = Color.black;
+			if (_isLightVersion == true) {
+				PlayerPrefs.SetString ("LightVersion", "Yes");
+				_text.SetActive (true);
+			} else {
+				PlayerPrefs.SetString ("LightVersion", "No");
+				_text.SetActive (false);
+				RenderSettings.ambientLight = Color.black;
+			}
 		}
 	}
 	

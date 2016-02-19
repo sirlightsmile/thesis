@@ -140,22 +140,6 @@ Material:
         second: 0
       data:
         first:
-          name: _InvFade
-        second: 3
-      data:
-        first:
-          name: _SquashAmount
-        second: 1
-      data:
-        first:
-          name: _BaseLight
-        second: .349999994
-      data:
-        first:
-          name: _AO
-        second: 2.4000001
-      data:
-        first:
           name: _Stencil
         second: 0
       data:
@@ -178,6 +162,22 @@ Material:
         first:
           name: _ColorMask
         second: 15
+      data:
+        first:
+          name: _InvFade
+        second: 3
+      data:
+        first:
+          name: _SquashAmount
+        second: 1
+      data:
+        first:
+          name: _BaseLight
+        second: .349999994
+      data:
+        first:
+          name: _AO
+        second: 2.4000001
     m_Colors:
       data:
         first:

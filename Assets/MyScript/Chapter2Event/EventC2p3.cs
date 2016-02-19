@@ -23,7 +23,6 @@ public class EventC2p3 : MonoBehaviour {
 	void OnTriggerExit(Collider _col){
 		if (_col.tag == "Player" && _PlayerActiveEvent==false) {
 			_PlayerActiveEvent=true;
-			_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Follow white women.";
 			StartCoroutine(C2p3Active());
 		}
 	}//TriggerExit
@@ -37,7 +36,7 @@ public class EventC2p3 : MonoBehaviour {
 	}
 
 	IEnumerator C2p3ActivePart2(){
-		_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Find Key to open door.";
+		_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Find Key and follow white women.";
 		yield return new WaitForSeconds(3f);
 		_AIracheal.SetActive (true);
 		_EventLook.transform.position = _AIracheal.transform.position;

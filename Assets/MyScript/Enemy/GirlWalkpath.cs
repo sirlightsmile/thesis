@@ -10,14 +10,15 @@ public class GirlWalkpath : MonoBehaviour {
 	private bool _SearchingIdle;
 	public bool _playerInSight;
 	//for animation of walk
-	private bool _isWalking;	
+	public bool _isWalking;	
 	private GameObject _Player;	
+	public bool _hearing;
 	// Use this for initialization
 	void Start () {
 		//when start. is on searching state or not
 		//_SearchingState = false;
 		_SearchingIdle = true;
-
+		_hearing = false;
 		_point = GameObject.Find ("GirlPoint");
 		_Player = GameObject.FindWithTag ("Player");
 		_girlNav = GetComponent<NavMeshAgent> ();
@@ -47,6 +48,7 @@ public class GirlWalkpath : MonoBehaviour {
 			if (_SearchingState == false) {
 				if(_point!=null){
 					_isWalking=true;
+				
 					_girlNav.SetDestination (_point.transform.position);
 				}else{
 					Debug.Log("No Destination");
@@ -78,9 +80,14 @@ public class GirlWalkpath : MonoBehaviour {
 		_GirlAnimate.SetBool ("Search", false);
 		gameObject.GetComponent<GirlSense> ().fieldOfViewAngle = 130f;
 		yield return new WaitForSeconds(3f);
-		_SearchingState = false;
-		_SearchingIdle = true;
-		_isWalking=true;		
+		if (_hearing == true) {
+			_girlNav.Resume ();
+			_hearing=false;
+		}
+			_SearchingState = false;
+			_SearchingIdle = true;
+			_isWalking = true;
+		
 		
 	}//IEnumerator
 

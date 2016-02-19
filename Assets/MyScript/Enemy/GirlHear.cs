@@ -18,16 +18,23 @@ public class GirlHear : MonoBehaviour {
 				lookPos.y = 0;
 				var rotation = Quaternion.LookRotation(lookPos);
 				transform.parent.rotation = Quaternion.Slerp(transform.parent.rotation, rotation, Time.deltaTime * 10f);
-				
+
 				if(gameObject.GetComponentInParent<GirlWalkpath>()._SearchingState==false){
 					gameObject.GetComponentInParent<GirlWalkpath>()._SearchingState=true;
+					gameObject.GetComponentInParent<GirlWalkpath>()._hearing=true;
+					gameObject.GetComponentInParent<NavMeshAgent>().Stop();
 				}
 				
 			}
 		}
 	}//OnTriggerStay
 
+	void OnTriggerExit (Collider other)
+	{	
+		if (other.gameObject.tag == "Player") {	
 
+		}
+	}//Exit
 
 	/* style that let enemy check that point
 	void OnTriggerStay (Collider other)
