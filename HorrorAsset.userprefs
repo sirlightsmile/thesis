@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MyScript\Player\PlayerRaycast.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MyScript\Chapter2Event\EventC2p3.cs">
     <Files>
-      <File FileName="Assets\MyScript\Player\PlayerRaycast.cs" Line="34" Column="44" />
+      <File FileName="Assets\MyScript\Chapter2Event\EventC2p3.cs" Line="48" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

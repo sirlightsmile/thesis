@@ -24,7 +24,7 @@ public class toCutScene2 : MonoBehaviour {
 	
 	void StartCutscene2(){
 		if (OVRGamepadController.GPC_GetButtonDown(OVRGamepadController.Button.B)){
-			Application.LoadLevel("CutScene2");
+			Application.LoadLevel("CutScene2-1");
 		}
 	}
 }

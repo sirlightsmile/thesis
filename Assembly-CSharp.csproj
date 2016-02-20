@@ -100,7 +100,6 @@
      <Compile Include="Assets\-FPH\_Scripts\z_Examples\FPH_Example_InteractIHaveObject.cs" />
      <Compile Include="Assets\-FPH\_Scripts\z_Examples\FPH_Example_InteractIUseEquippedObject.cs" />
      <Compile Include="Assets\-FPH\_Scripts\z_Examples\FPH_Example_InteractObject.cs" />
-     <Compile Include="Assets\MyScene\Chapter2\ToFirstFloor.cs" />
      <Compile Include="Assets\MyScript\CancleClue.cs" />
      <Compile Include="Assets\MyScript\Chapter1Event\CutScene1\CutScene1Control.cs" />
      <Compile Include="Assets\MyScript\Chapter1Event\DemonPic.cs" />
@@ -121,7 +120,10 @@
      <Compile Include="Assets\MyScript\Chapter1Event\Tutorial2.cs" />
      <Compile Include="Assets\MyScript\Chapter1Event\thenCutScene1.cs" />
      <Compile Include="Assets\MyScript\Chapter1Event\toChapter2.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\CutScene2\CutScene2Control.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\CutScene2\CutScene2Control2.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\CutScene2Saw.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\EndChapter2.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\EventC2p1.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\EventC2p2.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\EventC2p3.cs" />
@@ -131,6 +133,7 @@
      <Compile Include="Assets\MyScript\Chapter2Event\KeyFound.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\PlayerThink.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\SecondFloorKey.cs" />
+     <Compile Include="Assets\MyScript\Chapter2Event\ToFirstFloor.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\TurnOffThink.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\toCutScene2.cs" />
      <Compile Include="Assets\MyScript\CheckPoint.cs" />

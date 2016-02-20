@@ -29,6 +29,7 @@ public class DemonPic : MonoBehaviour {
 
 	void OnTriggerEnter (Collider _col){
 		if (_col.tag == "Player") {
+			_clueMessage.GetComponent<UnityEngine.UI.Text>().text="Press B : Pick up";
 			_clueMessage.SetActive(true);
 			_canActive=true;
 		}

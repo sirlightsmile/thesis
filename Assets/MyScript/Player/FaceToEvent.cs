@@ -19,7 +19,7 @@ public class FaceToEvent : MonoBehaviour {
 		rotation.x = 0.0f;
 		rotation.z = 0.0f;
 		Quaternion current = transform.localRotation;
-		transform.localRotation = Quaternion.Slerp(current,rotation,Time.deltaTime*10);
+		transform.localRotation = Quaternion.Slerp(current,rotation,Time.deltaTime*turn_speed);
 	}//rotateToward
 
 }

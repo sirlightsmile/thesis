@@ -20,6 +20,7 @@ public class FirstFloorKey : MonoBehaviour {
 	void OnTriggerEnter(Collider _col){
 		if (_col.tag == "Player" && _key.activeSelf!=false) {
 			_canGet=true;
+			_ActionClueUI.GetComponent<UnityEngine.UI.Text>().text="Press B : Pick up";
 			_ActionClueUI.SetActive(true);
 		}
 	}//triggerEnter

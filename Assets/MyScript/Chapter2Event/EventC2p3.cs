@@ -11,6 +11,7 @@ public class EventC2p3 : MonoBehaviour {
 	private bool _PlayerActiveDoor=false;
 	public GameObject _Hint;
 	public GameObject _Checkpoint;
+	public GameObject _ClueUI;
 
 	void FixedUpdate(){
 		if (_TargetDoor.GetComponent<AudioSource> ().isPlaying == true 
@@ -36,6 +37,8 @@ public class EventC2p3 : MonoBehaviour {
 	}
 
 	IEnumerator C2p3ActivePart2(){
+		_ClueUI.GetComponent<UnityEngine.UI.Text> ().text = "(I have to find key.)";
+		_ClueUI.SetActive (true);
 		_Hint.GetComponent<UnityEngine.UI.Text>().text="Hint : Find Key and follow white women.";
 		yield return new WaitForSeconds(3f);
 		_AIracheal.SetActive (true);
@@ -47,7 +50,7 @@ public class EventC2p3 : MonoBehaviour {
 		_AIracheal.GetComponent<AudioSource> ().Play ();
 		FaceToEvent._turning = false;
 		yield return new WaitForSeconds(7.5f);
-		_Checkpoint.GetComponent<CheckPoint>()._SaveScene="Chapter2-2";
+		_Checkpoint.GetComponent<CheckPoint>()._SaveScene="Chapter2-2checkpoint";
 		_Checkpoint.SetActive(true);
 		Destroy (this.gameObject);
 

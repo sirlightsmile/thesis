@@ -129,7 +129,7 @@ public class GirlSense : MonoBehaviour {
 		if (_EnemyBySide == false) {
 			_EnemyUI.SetActive (true);
 		}
-		yield return new WaitForSeconds (1f);
+		yield return new WaitForSeconds (1.5f);
 		Menu._GameOver = true;
 
 

@@ -25,3 +25,15 @@ EditorBuildSettings:
     path: Assets/MyScene/Chapter1/Chapter 1-Part2.5.unity
   - enabled: 1
     path: Assets/MyScene/GameOver.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter2/Chapter2-1.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter2/Chapter2-2checkpoint.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter2/Chapter2-3checkpoint.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter2/Chapter2-4.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter2/CutScene2-1.unity
+  - enabled: 1
+    path: Assets/MyScene/Chapter2/CutScene2-2.unity
