@@ -25,7 +25,7 @@ public class EnemyPoint : MonoBehaviour {
 			_route[i]=_RouteMaster.transform.GetChild(i).gameObject;
 		}
 		_routeNum = 0;
-		gameObject.transform.position=_route[0].gameObject.transform.position;
+		//gameObject.transform.position=_route[0].gameObject.transform.position;
 	}
 
 	void OnTriggerEnter(Collider _col){

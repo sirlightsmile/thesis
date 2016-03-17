@@ -8,14 +8,9 @@ public class EnemyAttack : MonoBehaviour {
 			//open door automatic
 			if(other.gameObject.GetComponent<Door>()._isOpen==false){
 				other.gameObject.GetComponent<Door>().DoorInteractive("Enemy");
-
+				_currentDoorEnemyActive=null;
 				_currentDoorEnemyActive=other.gameObject;
 
-			}
-			//fix bug run toward and make door away
-			if(other.gameObject.GetComponent<Door>()._isOpen==true
-			   && gameObject.GetComponentInParent<EnemySight> ().playerInSight == true){
-				other.gameObject.GetComponent<BoxCollider>().isTrigger=true;
 			}
 		}//with door
 
@@ -41,11 +36,9 @@ public class EnemyAttack : MonoBehaviour {
 
 	void OnTriggerExit (Collider _col){
 		if (_col.name == "DoorZone" && _currentDoorEnemyActive!=null ){
-
 			if(_currentDoorEnemyActive.GetComponent<Door>()._isAutomaticClose==true
 		    && _currentDoorEnemyActive.GetComponent<Door>()._isOpen==true
 		    && _col.transform.parent.name == _currentDoorEnemyActive.transform.parent.name){
-
 			_currentDoorEnemyActive.gameObject.GetComponent<Door>().DoorInteractive("Enemy");
 			_currentDoorEnemyActive=null;
 

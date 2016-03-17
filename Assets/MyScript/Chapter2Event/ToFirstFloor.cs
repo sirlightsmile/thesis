@@ -9,7 +9,7 @@ public class ToFirstFloor : MonoBehaviour {
 		if (_col.tag == "Player") {
 			if(_allow==true){
 				PlayerPrefs.SetString("NextFromLoad","FirstFloor");
-				Application.LoadLevel("LoadScene");
+				Application.LoadLevel("LoadingScene");
 			}else{
 				if(_ActionMessage==null){
 					Debug.Log ("action message missing");

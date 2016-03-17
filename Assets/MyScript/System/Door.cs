@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Door : MonoBehaviour {
 
-	public bool _Locked = false;
-	public bool _isOpen=false;
-	public bool _isAutomaticClose=true;
-	public bool _PlayerGotKey = false;
+	public bool _Locked;
+	public bool _isOpen;
+	public bool _isAutomaticClose;
+	public bool _PlayerGotKey;
 	private bool _isAnimate = false;
 	private AudioClip _doorOpenSound;
 	private AudioClip _doorCloseSound;
@@ -81,7 +81,7 @@ public class Door : MonoBehaviour {
 	IEnumerator AnimateDoorOpen(){
 		yield return new WaitForSeconds (0.5f);
 		_isAnimate = false;
-		if (_isAutomaticClose == false) {
+		if (!_isAutomaticClose) {
 			gameObject.GetComponent<BoxCollider> ().isTrigger = false;
 		}
 	}

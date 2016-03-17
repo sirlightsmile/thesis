@@ -136,6 +136,11 @@
      <Compile Include="Assets\MyScript\Chapter2Event\ToFirstFloor.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\TurnOffThink.cs" />
      <Compile Include="Assets\MyScript\Chapter2Event\toCutScene2.cs" />
+     <Compile Include="Assets\MyScript\Chapter3Event\C3Event0.cs" />
+     <Compile Include="Assets\MyScript\Chapter3Event\C3Event1.cs" />
+     <Compile Include="Assets\MyScript\Chapter3Event\FirePlace2Active.cs" />
+     <Compile Include="Assets\MyScript\Chapter3Event\FirePlace3Active.cs" />
+     <Compile Include="Assets\MyScript\Chapter3Event\SecondCameraPos.cs" />
      <Compile Include="Assets\MyScript\CheckPoint.cs" />
      <Compile Include="Assets\MyScript\DestroyTime.cs" />
      <Compile Include="Assets\MyScript\Enemy\EnemyAttack.cs" />
@@ -167,6 +172,7 @@
      <Compile Include="Assets\MyScript\System\FirstFloorZoneControl.cs" />
      <Compile Include="Assets\MyScript\System\HiddenCameraActive.cs" />
      <Compile Include="Assets\MyScript\System\LoadingScene.cs" />
+     <Compile Include="Assets\MyScript\System\ScreenFadeOut.cs" />
      <Compile Include="Assets\MyScript\System\SoundFadeInOut.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVROverlay.cs" />

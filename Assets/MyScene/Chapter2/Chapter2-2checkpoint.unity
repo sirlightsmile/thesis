@@ -11243,26 +11243,6 @@ Transform:
   - {fileID: 194010632}
   m_Father: {fileID: 1324038239}
   m_RootOrder: 2
---- !u!1 &677561421 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 111880, guid: 7f2fffb2aeb358343b047676c0d992e0, type: 2}
-  m_PrefabInternal: {fileID: 173921951}
---- !u!114 &677561422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 677561421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 206c3aaafe994734989eed1b249adee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _FadeIn: 1
-  _FadeOut: 0
-  _Speed: .100000001
-  _MaxVolume: 1
-  _AudioFadeIn: {fileID: 8300000, guid: 6415f3fea2e7bbb49a4b579638e0bda6, type: 3}
 --- !u!1001 &682515073
 Prefab:
   m_ObjectHideFlags: 0
